@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: credit-refund-agent-framework
+
+  # Spring AI Configuration
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2
+          temperature: 0.7
+    
+    # MCP Server Configuration
+    mcp:
+      server:
+        enabled: true
+        port: 8081
+        tools:
+          enabled: true
+
+server:
+  port: 8080
+
+# LangChain4j Configuration (for backward compatibility)
+langchain4j:
+  ollama:
+    base-url: http://localhost:11434
+    model: llama3.2
+    temperature: 0.7
+
+# MCP Configuration
+mcp:
+  server:
+    name: refund-validation-tools
+    version: 1.0.0
+  client:
+    enabled: false
+
+logging:
+  level:
+    com.financial.agents: DEBUG
+    dev.langchain4j: INFO
+    org.springframework.ai: INFO
+    org.springframework.ai.mcp: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

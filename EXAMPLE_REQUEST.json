@@ -1,0 +1,9 @@
+{
+  "customerId": "CUST123",
+  "accountNumber": "ACC456789",
+  "refundAmount": 500.00,
+  "currency": "USD",
+  "reason": "Overpayment due to duplicate charge. Customer was charged twice for the same service.",
+  "customerEmail": "customer@example.com",
+  "customerPhone": "+1234567890"
+}
